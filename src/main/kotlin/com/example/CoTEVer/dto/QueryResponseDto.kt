@@ -3,6 +3,8 @@ package com.example.CoTEVer.dto
 data class QueryResponseDto(
     val query : String,
     val stepCount : Int,
+    val finalAnswer : String,
+    val finalExplanation : String,
     val nodeList: List<QueryNode>
 )
 

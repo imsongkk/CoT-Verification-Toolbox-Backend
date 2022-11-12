@@ -9,6 +9,8 @@ data class ResultRequestDto(
     val finalAnswerAlt : String,
     val finalAnswerRating : Int,
     val finalExplanation : String,
+    val finalExplanationAlt : String,
+    val finalExplanationRating : Int,
     val nodeList: List<ResultNode>
 ) {
     fun toLog() : Log{

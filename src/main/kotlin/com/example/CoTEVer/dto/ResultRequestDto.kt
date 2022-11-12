@@ -6,6 +6,7 @@ data class ResultRequestDto(
     val query : String,
     val stepCount : Int,
     val finalAnswer : String,
+    val finalAnswerAlt : String,
     val finalAnswerRating : Int,
     val finalExplanation : String,
     val nodeList: List<ResultNode>

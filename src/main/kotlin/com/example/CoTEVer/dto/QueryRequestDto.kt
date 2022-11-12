@@ -1,5 +1,5 @@
 package com.example.CoTEVer.dto
 
-data class ClientRequestDto(
+data class QueryRequestDto(
     val query: String
 )

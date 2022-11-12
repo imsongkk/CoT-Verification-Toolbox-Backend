@@ -1,12 +1,12 @@
 package com.example.CoTEVer.dto
 
-data class ClientResponseDto(
+data class QueryResponseDto(
     val query : String,
     val stepCount : Int,
-    val nodeList: List<Node>
+    val nodeList: List<QueryNode>
 )
 
-data class Node(
+data class QueryNode(
     val subQuestion : String,
     val subQuestionKeyword : String,
     val subAnswer : String,

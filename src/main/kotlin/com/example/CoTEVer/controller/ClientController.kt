@@ -16,11 +16,6 @@ class ClientController(
 ){
     @GetMapping("/query")
     fun userQuery(@RequestBody clientRequestDto: ClientRequestDto) : ClientResponseDto{
-        val res = ClientResponseDto(clientRequestDto.query, 2, listOf(
-            Node("subquery1", solution = "solution1", url = "www.naver.com"),
-            Node("subquery2", solution = "solution2", url = "www.google.com")
-            )
-        )
-        return res
+        return queryService.getAnswer(clientRequestDto.query)
     }
 }

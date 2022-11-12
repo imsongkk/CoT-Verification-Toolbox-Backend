@@ -7,7 +7,8 @@ data class ClientResponseDto(
 )
 
 data class Node(
-    val subQuery : String,
-    val solution : String,
-    val url : String,
+    val subQuestion : String,
+    val subQuestionKeyword : String,
+    val subAnswer : String,
+    val top5List : List<Pair<String, String>>,
 )

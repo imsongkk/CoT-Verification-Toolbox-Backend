@@ -12,7 +12,8 @@ class QueryService(
     val logRepository: LogRepository
 ) {
     fun getAnswer(query : String) : QueryResponseDto{
-        val res = QueryResponseDto(query, 2, listOf(
+        val res = QueryResponseDto(query, 2, finalAnswer = "A", finalExplanation = "B",
+            listOf(
             QueryNode("subquery1", subQuestionKeyword = "keyword1", subAnswer = "solution1", top5List = listOf(
                 Pair("www.naver.com","A"),
                 Pair("www.naverB.com","B"),
@@ -31,6 +32,6 @@ class QueryService(
     }
 
     fun saveResult(resultRequestDto: ResultRequestDto){
-
+        logRepository.save(resultRequestDto.toLog())
     }
 }

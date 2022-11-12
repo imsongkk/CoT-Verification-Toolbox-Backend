@@ -10,12 +10,10 @@ data class ResultRequestDto(
     val finalExplanation : String,
     val nodeList: List<ResultNode>
 ) {
-    companion object{
-        fun toLog(resultRequestDto: ResultRequestDto) : Log{
-            return Log(
-                resultRequestDto
-            )
-        }
+    fun toLog() : Log{
+        return Log(
+            resultRequestDto = this
+        )
     }
 }
 

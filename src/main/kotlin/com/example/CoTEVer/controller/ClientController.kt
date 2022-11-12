@@ -22,6 +22,6 @@ class ClientController(
 
     @PostMapping("/result")
     fun userResult(@RequestBody resultRequestDto: ResultRequestDto){
-
+        queryService.saveResult(resultRequestDto)
     }
 }

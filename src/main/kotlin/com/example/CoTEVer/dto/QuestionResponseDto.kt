@@ -20,6 +20,6 @@ data class Document(
 )
 
 data class ApiOutput(
-    val final_explanation:String,
+    //val final_explanation:String,
     val final_answer:String,
 )

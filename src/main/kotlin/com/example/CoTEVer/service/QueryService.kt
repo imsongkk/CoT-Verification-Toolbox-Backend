@@ -14,9 +14,9 @@ class QueryService(
     val logRepository: LogRepository
 ) {
     suspend fun getAnswer(questionRequestDto: QuestionRequestDto) : QuestionResponseDto{
-        val client = WebClient.create("http://35.206.248.188:8000/test")
+        val client = WebClient.create("http://35.206.248.188:5000/test")
         val ret =  client.post()
-            .uri("http://35.206.248.188:8000/test")
+            .uri("http://35.206.248.188:5000/test")
             .contentType(MediaType.APPLICATION_JSON)
             .body(Mono.just(questionRequestDto))
             .retrieve()
